@@ -16,12 +16,18 @@ pageEncoding="ISO-8859-1"%>
 		</head>
 	<body>
 	
-	<center>
-	<h1>Customer Management</h1>
-	</center>
-	<div class="container">
-		<div class="row">
-			<div class="col">
+	 <nav class="navbar navbar-dark bg-dark" style="justify-content: center">
+            <h3 style="color: white">ElectroGrid</h3>
+     </nav>
+     
+    <br>
+	<div class="container" style="max-width: 90%">
+	<div style="text-align: center">
+		<h1>Customer Management</h1><br></br>
+	</div>
+     
+	<div class="row">
+		<div class="col-4"> 
 
 				<form id="formCus" name="formCus" method="post" action="customers.jsp">
 					Customer Name:
@@ -42,35 +48,27 @@ pageEncoding="ISO-8859-1"%>
 					<br>
 					
 					<input id="btnSave" name="btnSave" type="button" value="Save"
-					class="btn btn-primary btn-lg">
+					class="btn btn-info btn-lg">
 					
 					<input type="hidden" id="hidCusSave" name="hidCusSave" value="">
-				</form>
-				
-			</div>
-		</div>
-	</div>
-	
-	<br>
-	
-	<div class="container">
-		<div class="row">
-			<div class="col">
-			
-				<div id="alertSuccess" class="alert alert-success"></div>
-				<div id="alertError" class="alert alert-danger"></div>
-				
-				<br>
-				<div id="divCusGrid">
-				 <%
-				 	Customer cusObj = new Customer(); 
-				 	out.print(cusObj.readCustomer());
-				 %>
-				</div>
 
-			</div>
+			</form>
+
+			<br>
+		<div id="alertSuccess" class="alert alert-success"></div>
+		<div id="alertError" class="alert alert-danger"></div>
+		
+		<br>
 		</div>
-	</div>
+		<div id="divCusGrid" class="col-8" style="text-align: center">
+		<br>
+			 <%
+				Customer cusObj = new Customer(); 
+				out.print(cusObj.readCustomer());
+			 %>
+		</div>
+	</div> </div> 
 	
 	</body>
 	</html>
+
