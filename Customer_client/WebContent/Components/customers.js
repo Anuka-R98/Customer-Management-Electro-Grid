@@ -92,6 +92,9 @@ function validateCustomerForm()
 	 {
 		return "Insert Customer NIC.";
 	 }
+	
+	
+	
 	// Email-------------------------------------
 	if ($("#customerEmail").val().trim() == "")
 	 {

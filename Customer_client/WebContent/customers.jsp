@@ -11,6 +11,7 @@ pageEncoding="ISO-8859-1"%>
 		<link rel="stylesheet" href="Views/bootstrap.min.css">
 		<script src="Components/jquery.min.js"></script>
 		<script src="Components/customers.js"></script>
+		<script src="Components/validation.js"></script>
 		
 		</head>
 	<body>
