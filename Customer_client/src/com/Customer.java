@@ -70,7 +70,7 @@ public class Customer {
 				 
 				 // Buttons
 				 output += 
-				   "<td><input name='btnUpdate' type='button' value='Update' " + "class='btnUpdate btn btn-secondary' data-cid='" + cID + "'></td>"
+				   "<td><input name='btnUpdate' type='button' value='Update' " + "class='btnUpdate btn btn-success' data-cid='" + cID + "'></td>"
 				 + "<td><input name='btnRemove' type='button' value='Remove'class='btnRemove btn btn-danger' data-cid='" + cID + "'>"+"</td>"
 				 + "</form></td></tr>";
 				 				 

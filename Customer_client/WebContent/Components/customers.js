@@ -93,19 +93,42 @@ function validateCustomerForm()
 		return "Insert Customer NIC.";
 	 }
 	
-	
+	var regExpression = /^[0-9]{9}[vVxX]$/;
+	var nic = $("#customerNIC").val().trim();
+	if (!regExpression.test(nic)) {
+		
+		return "Insert Valid Customer NIC.";
+	}
 	
 	// Email-------------------------------------
 	if ($("#customerEmail").val().trim() == "")
 	 {
 		return "Insert Customer Email.";
 	 }
+	
+	var regExpression = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	var email = $("#customerEmail").val().trim();
+		if (!regExpression.test(email)) {
+			
+			return "Email is incorrect! Enter valid email! ";
+		}
+	
+	
 	// Phone-------------------------------------
 	if ($("#customerPNO").val().trim() == "")
 	 {
 		return "Insert Customer Phone number.";
 	 }
+	
+	var regExpression = /^\d{10}$/;
+	var phone = $("#customerPNO").val().trim();
+	if (!regExpression.test(phone)) {
+		
+		return "Phone number is incorrect!"
+	}
+	
 	return true;
+	
 }
 
 function onCustomerSaveComplete(response, status)
