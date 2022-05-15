@@ -42,7 +42,7 @@ public class Customer {
 			 
 			 // Prepare the html table to be displayed
 			 
-			 output = "<table border='1' class='table'><thead class='thead-dark'><th>Customer Name</th>" +"<th>Customer Address</th><th>Customer NIC</th>"+ "<th>Customer Email</th>" + "<th>Customer Phone Number</th>" + "<th>Update</th><th>Remove</th></thead>"; 
+			 output = "<table border='1' class='table table-bordered table-hover'><thead class='thead-dark'><th>Customer Name</th>" + "<th>Customer Address</th>" + "<th>Customer NIC</th>" + "<th>Customer Email</th>" + "<th>Phone Number</th>" + "<th>Registered Date/Time</th>" + "<th>Update</th><th>Remove</th></thead>";
 			 String query = "select * from custom"; 
 			 Statement stmt = con.createStatement(); 
 			 ResultSet rs = stmt.executeQuery(query); 
@@ -56,7 +56,8 @@ public class Customer {
 				 String customerAddress = rs.getString("customerAddress"); 
 				 String customerNIC = rs.getString("customerNIC"); 
 				 String customerEmail = rs.getString("customerEmail");
-				 String customerPNO = rs.getString("customerPNO"); 
+				 String customerPNO = rs.getString("customerPNO");
+				 String date = rs.getString("date"); 
 				 
 				 // Add a row into the html table
 				 output += "<tr><td>"+ customerName + "</td>";
@@ -64,6 +65,7 @@ public class Customer {
 				 output += "<td>" + customerNIC + "</td>";
 				 output += "<td>" + customerEmail + "</td>"; 
 				 output += "<td>" + customerPNO + "</td>";
+				 output += "<td>" + date + "</td>";
 //				 output += "<td>" + cID + "</td>";
 				 
 				 // Buttons
